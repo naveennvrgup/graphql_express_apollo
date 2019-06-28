@@ -1,0 +1,9 @@
+#endpoint: ''
+endpoint: https://eu1.prisma.sh/naveen-a140cf/learn-prisma-demodb/learn-prisma-stage
+datamodel: datamodel.prisma
+generate:
+  - generator: javascript-client
+    output: ../src/generated/prisma-
+hooks:
+  post-deploy:
+    - prisma generate
